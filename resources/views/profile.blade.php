@@ -9,8 +9,8 @@
               <form enctype="multipart/form-data" action="/profile" method="POST">
                 <label> Change Profile Picture </label>
                 <input type="file" name="picture">
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                <input type="submit" class="pull-right btn btn-md btn-primary">
+                <input type="hidden" name="_token" value="{{csrf_token()}}"><br>
+                <input type="submit" class="btn btn-md btn-primary">
               </form>
         </div>
     </div>
