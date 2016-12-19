@@ -21,6 +21,10 @@ class UserController extends Controller
       return view('editprofile', array('user' => Auth::user()));
     }
 
+    public function viewusers(){
+      return view('viewusers', array('user' => Auth::user()));
+    }
+
     public function editemail(Request $request){
       $id = Auth::id();
       if($request->name('updateemail')){
