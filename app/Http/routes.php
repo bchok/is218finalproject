@@ -19,6 +19,8 @@ Route::get('profile', 'UserController@profile');
 
 Route::get('editprofile', 'UserController@editprofile');
 
+Route::get('viewusers', 'UserController@viewusers');
+
 Route::post('profile', 'UserController@update_pic');
 
 Route::post('editprofile', 'UserController@editemail');
