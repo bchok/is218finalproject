@@ -16,7 +16,19 @@ class UserController extends Controller
     public function profile(){
       return view('profile', array('user' => Auth::user()));
     }
+
     public function editprofile(){
+      return view('editprofile', array('user' => Auth::user()));
+    }
+
+    public function editemail(Request $request){
+      $id = Auth::id();
+      if($request->name('updateemail')){
+        $newemail = $request->input('newemail');
+        DB::table('users')->where('id', $id)->update(array('email' => $newemail));
+        $user = Auth::user();
+        $user->email->save();
+      }
       return view('editprofile', array('user' => Auth::user()));
     }
 
