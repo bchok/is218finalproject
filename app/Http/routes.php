@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('profile', 'UserController@profile');
 
+Route::post('profile', 'UserController@update_pic');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
