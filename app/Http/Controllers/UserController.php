@@ -16,6 +16,9 @@ class UserController extends Controller
     public function profile(){
       return view('profile', array('user' => Auth::user()));
     }
+    public function editprofile(){
+      return view('editprofile', array('user' => Auth::user()));
+    }
 
     public function update_pic(Request $request){
       if($request->hasFile('picture')){
