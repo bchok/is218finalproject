@@ -21,6 +21,8 @@ Route::get('editprofile', 'UserController@editprofile');
 
 Route::post('profile', 'UserController@update_pic');
 
+Route::post('editprofile', 'UserController@editemail');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
