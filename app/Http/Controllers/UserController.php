@@ -11,7 +11,7 @@ use Auth;
 class UserController extends Controller
 {
     //
-    public functoin profile(){
-      return view('profile', array('user' => Auth::user));
+    public function profile(){
+      return view('profile', array('user' => Auth::user()));
     }
 }
