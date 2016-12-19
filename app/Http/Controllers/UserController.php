@@ -10,6 +10,11 @@ use Auth;
 
 use Image;
 
+use DB;
+
+use app\viewuser;
+
+
 class UserController extends Controller
 {
     //
@@ -22,7 +27,8 @@ class UserController extends Controller
     }
 
     public function viewusers(){
-      return view('viewusers', array('user' => Auth::user()));
+      $users = DB::table('users')->get();
+      return view('viewusers', ['users' => $users]);
     }
 
     public function editemail(Request $request){
